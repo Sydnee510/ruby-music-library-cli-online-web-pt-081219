@@ -50,5 +50,9 @@ def self.new_from_filename(file)
   song_genre = Genre.find_or_create_by_name(genre)
   new_song = Song.new(song, song_artist, song_genre)
 end
+def self.create_from_filename(name)
+    @@all << self.new_from_filename(name)
+
+  end
 
 end
